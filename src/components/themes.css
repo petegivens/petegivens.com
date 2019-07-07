@@ -1,0 +1,10 @@
+html {
+  --primary: tomato;
+  --secondary: limegreen;
+  --link-color: white;
+}
+
+html.theme2 {
+  --primary: purple;
+  --secondary: skyblue;
+}

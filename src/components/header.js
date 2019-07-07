@@ -1,42 +1,31 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
+import React from 'react'
+import { useTheme } from '../hooks/useTheme'
+import './header.css'
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
+const Header = ({ siteTitle }) => {
+  const { theme, themeList, setTheme } = useTheme()
+  return (
+    <header>
+      <h1>
+        <Link to="/">{siteTitle}</Link>
       </h1>
-    </div>
-  </header>
-)
+      <select value={theme} onChange={e => setTheme(e.target.value)}>
+        {themeList.map(theme => (
+          <option value={theme}>{theme}</option>
+        ))}
+      </select>
+    </header>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: '',
 }
 
 export default Header
