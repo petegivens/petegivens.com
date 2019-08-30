@@ -1,5 +1,5 @@
 header {
-  background-color: var(--primary);
+  background-color: var(--color-primary);
   padding: 1em;
   display: flex;
   align-items: center;
@@ -10,5 +10,5 @@ header h1 {
 }
 header a {
   text-decoration: none;
-  color: var(--link-color);
+  color: var(--color-link);
 }

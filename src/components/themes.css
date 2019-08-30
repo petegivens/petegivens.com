@@ -1,10 +1,13 @@
 html {
-  --primary: tomato;
-  --secondary: limegreen;
-  --link-color: white;
+  --color-primary: tomato;
+  --color-secondary: limegreen;
+  --color-link: white;
+  --font-family: sans-serif;
 }
 
 html.theme2 {
-  --primary: purple;
-  --secondary: skyblue;
+  --color-primary: purple;
+  --color-secondary: skyblue;
+  --color-link: white;
+  --font-family: Georgia;
 }
